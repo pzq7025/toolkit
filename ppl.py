@@ -26,13 +26,6 @@ def get_lls(text):
     return pow(math.e, -result)
   
 
-print("==" * 50)
-# for text_one in text_ori:
-#     get_lls(text_one)
-text_ori = texts = pf["text"][mid:]
-original_result = [get_lls(text_one) for text_one in text_ori]
-
-
 
 name = "gpt2-medium"
 base_model_kwargs = {}
@@ -50,6 +43,14 @@ print("style after ...")
 # for text_one in texts:
 #     get_lls(text_one)
 sampled_result = [get_lls(text_one) for text_one in texts]
+
+
+
+print("==" * 50)
+# for text_one in text_ori:
+#     get_lls(text_one)
+text_ori = texts = pf["text"][mid:]
+original_result = [get_lls(text_one) for text_one in text_ori]
 
 
 # 计算结果
